@@ -24,11 +24,25 @@ import express from "express";
 import mongoose from "mongoose";
 const app = express(); 
 import configObject from "./config/config.js";
+import UserModel from "./models/usuario.model.js";
 
 const {mongo_url, puerto} = configObject; 
 
-app.get("/", (req, res) => {
-    res.send("Conectado")
+// Conexion a MONGO DB
+
+await mongoose.connect(mongo_url)
+    .then(() => {console.log("Conectado a Mongo DB");})
+    .catch((error) => {console.log("Error de Conexion a Mongo DB", error);})
+
+//Rutas
+
+app.get("/", async (req, res) => {
+    try {
+        const usuarios = await UserModel.find();
+        res.send(usuarios);
+    } catch (error) {
+        res.status(500).send("Error del servidor")
+    }
 });
 
 app.listen(puerto, () => {

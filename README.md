@@ -8,3 +8,11 @@ habla del socket manager de 3era preentrega --------- 01:44
 que es process -------------------------------------- 02:34
 manejo de argumentos en la consola ------------------ 02:52  
 trabajando con commander ---------------------------- 02:55  
+cargando bases de produccion y desarrollo ----------- 03:08  
+modo produccion o desarrollo en package json -------- 03:12  
+variables de entorno -------------------------------- 03:15  
+.env.desarrollo ------------------------------------- 03:19  
+instalando y configurando dotenv en config.js ------- 03:21  
+testeando entornos en app.js ------------------------ 03:26  
+
+

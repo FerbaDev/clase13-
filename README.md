@@ -16,3 +16,4 @@ instalando y configurando dotenv en config.js ------- 03:21
 testeando entornos en app.js ------------------------ 03:26  
 
 
+(req, res) =>

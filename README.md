@@ -17,5 +17,5 @@ testeando entornos en app.js ------------------------ 03:26
 configurando conexion a Mongo DB -------------------- 03:48
 
 
-
+dejé en 03:52
 (req, res) =>

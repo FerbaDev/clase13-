@@ -1,0 +1,20 @@
+{
+  "name": "clase13-",
+  "version": "1.0.0",
+  "description": "Global & Child Process",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "commander": "^12.0.0"
+  }
+}

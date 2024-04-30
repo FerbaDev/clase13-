@@ -5,7 +5,7 @@ habla del socket manager de 3era preentrega --------- 01:44
 
 ## Proceso principal del servidor + Global & Child Process
 
-que es process -------------------------------------- 02:34
+que es process -------------------------------------- 02:34  
 manejo de argumentos en la consola ------------------ 02:52  
 trabajando con commander ---------------------------- 02:55  
 cargando bases de produccion y desarrollo ----------- 03:08  

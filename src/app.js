@@ -48,3 +48,37 @@ app.get("/", async (req, res) => {
 app.listen(puerto, () => {
     console.log(`Conectado en http://localhost:${puerto}`);
 })
+
+//6) Child Process: 
+
+// function operacionCompleja() {
+//     let resultado = 0; 
+
+//     for(let i = 0; i <5e9; i++){
+//         resultado += i; 
+//     }
+
+//     return resultado; 
+// }
+
+// app.get("/suma", (req, res) => {
+//     const resultado = operacionCompleja();
+//     res.send(`El resultado de la operacion: ${resultado}`);
+// })
+
+//Pasitos para lograr el forkeo: 
+
+//1) Separamos la función que trae problemas a otro modulo.
+//2) La modificamos y la dejamos disponible para cuando el padre la solicite. 
+//3) Ejecutamos la ruta. 
+
+import {fork} from "child_process";
+//No hace falta instalar nada, ya es un proceso nativo. 
+
+app.get("/suma", (req, res) => {
+    const child = fork("./src/operacionesComplejas.js");
+    child.send("iniciando"); //Acá el proceso padre le envia un mensaje al hijo. 
+    child.on("message", resultado => {
+        res.send(`El resultado de la operacion es: ${resultado} `);
+    })
+})

@@ -15,6 +15,8 @@ variables de entorno -------------------------------- 03:15
 instalando y configurando dotenv en config.js ------- 03:21  
 testeando entornos en app.js ------------------------ 03:26  
 configurando conexion a Mongo DB -------------------- 03:48
+listeners ------------------------------------------- 03:53  
+
 
 
 dejé en 03:52
